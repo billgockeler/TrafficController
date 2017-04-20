@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="street_width">100dp</dimen>
+    <dimen name="light_diameter">25dp</dimen>
+    <dimen name="light_box">50dp</dimen>
+</resources>

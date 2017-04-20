@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jet.trafficcontroller.view.LightActivity">
+
+    <RelativeLayout
+        android:id="@+id/horizontal_street"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/street_width"
+        android:layout_centerVertical="true"
+        android:background="@color/streetColor">
+
+        <View
+            android:id="@+id/horizontal_anchor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+        <View
+            android:id="@+id/left_light"
+            android:layout_width="@dimen/light_diameter"
+            android:layout_height="@dimen/light_diameter"
+            android:layout_toLeftOf="@+id/horizontal_anchor"
+            android:layout_marginRight="@dimen/light_box"
+            android:layout_centerVertical="true">
+        </View>
+
+        <View
+            android:id="@+id/right_light"
+            android:layout_width="@dimen/light_diameter"
+            android:layout_height="@dimen/light_diameter"
+            android:layout_toRightOf="@+id/horizontal_anchor"
+            android:layout_marginLeft="@dimen/light_box"
+            android:layout_centerVertical="true">
+        </View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vertical_street"
+        android:layout_width="@dimen/street_width"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@color/streetColor">
+
+        <View
+            android:id="@+id/vertical_anchor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+        <View
+            android:id="@+id/top_light"
+            android:layout_width="@dimen/light_diameter"
+            android:layout_height="@dimen/light_diameter"
+            android:layout_above="@+id/vertical_anchor"
+            android:layout_marginBottom="@dimen/light_box"
+            android:layout_centerHorizontal="true">
+        </View>
+
+        <View
+            android:id="@+id/bottom_light"
+            android:layout_width="@dimen/light_diameter"
+            android:layout_height="@dimen/light_diameter"
+            android:layout_below="@+id/vertical_anchor"
+            android:layout_marginTop="@dimen/light_box"
+            android:layout_centerHorizontal="true">
+        </View>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
