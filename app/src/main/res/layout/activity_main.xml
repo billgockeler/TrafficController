@@ -28,6 +28,14 @@
             android:layout_centerVertical="true">
         </View>
 
+        <TextView
+            android:id="@+id/horizontal_street_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/left_light"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/text_margin"/>
+
         <View
             android:id="@+id/right_light"
             android:layout_width="@dimen/light_diameter"
@@ -60,6 +68,14 @@
             android:layout_marginBottom="@dimen/light_box"
             android:layout_centerHorizontal="true">
         </View>
+
+        <TextView
+            android:id="@+id/vertical_street_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/top_light"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/text_margin"/>
 
         <View
             android:id="@+id/bottom_light"

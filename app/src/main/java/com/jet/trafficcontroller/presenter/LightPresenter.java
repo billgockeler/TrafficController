@@ -25,9 +25,13 @@ public class LightPresenter {
 
     public LightPresenter(LightView lightView){
         mView = lightView;
-        mCurrentState = -1;
         mHandler = new Handler();
         mLightStateProvider = new LightStateProvider();
+    }
+
+    public void start() {
+        mCurrentState = -1;
+        next();
     }
 
     public void next() {

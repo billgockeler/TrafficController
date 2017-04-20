@@ -3,6 +3,7 @@ package com.jet.trafficcontroller.view;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.jet.trafficcontroller.presenter.LightPresenter;
 import com.jet.trafficcontroller.R;
@@ -18,6 +19,8 @@ public class LightActivity extends AppCompatActivity implements LightView {
     @InjectView(R.id.right_light) View mRightLight;
     @InjectView(R.id.top_light) View mTopLight;
     @InjectView(R.id.bottom_light) View mBottomLight;
+    @InjectView(R.id.vertical_street_name) TextView mVerticalStreetName;
+    @InjectView(R.id.horizontal_street_name) TextView mHorizontalStreetName;
 
     LightPresenter controller;
 
@@ -28,11 +31,14 @@ public class LightActivity extends AppCompatActivity implements LightView {
         ButterKnife.inject(this);
 
         controller = new LightPresenter(this);
-        controller.next();
+        controller.start();
     }
 
     @Override
     public void setLightState(LightState lightState) {
+        mVerticalStreetName.setText(lightState.getVerticalStreet().getName());
+        mHorizontalStreetName.setText(lightState.getHorizontalStreet().getName());
+
         Light horizontalStreetLight = lightState.getHorizontalStreet().getLight();
         Light verticalStreetLight = lightState.getVerticalStreet().getLight();
 

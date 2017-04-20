@@ -4,4 +4,5 @@
     <dimen name="street_width">100dp</dimen>
     <dimen name="light_diameter">25dp</dimen>
     <dimen name="light_box">50dp</dimen>
+    <dimen name="text_margin">25dp</dimen>
 </resources>
